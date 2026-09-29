@@ -1,0 +1,21 @@
+jwt:
+  secret: "YjNhYzQ2MThkZjVmY2FhYTNjMGI0ZTI3ZjU5ZWIxM2I5MDI3YmJkNTZiOTI5ZTYzZjJmZTczYThjYThlZmVmZDEyMzRhc2RmYXNnZXJneWVoZWFyd2Vyd2Vyd2Vydw=="
+  access-exp: 900000
+  refresh-exp: 604800000
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/ORCLPDB1
+    username: PMH_USER
+    password: ******
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update   # Lúc dev để "update" cho Hibernate tự tạo bảng lần đầu; khi lên Production đổi thành "validate"
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+    show-sql: false
